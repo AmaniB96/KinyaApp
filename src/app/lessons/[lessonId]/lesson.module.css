@@ -1,0 +1,17 @@
+.lessonContainer {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.loadingContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+}
+
+.loadingIndicator {
+  color: var(--color-text-muted);
+  font-size: 1.2rem;
+}

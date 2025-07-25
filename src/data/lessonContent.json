@@ -1,0 +1,199 @@
+[
+  {
+    "id": "basic-greetings",
+    "title": "Basic Greetings in Kinyarwanda",
+    "theory": [
+      {
+        "heading": "Introduction to Kinyarwanda Greetings",
+        "paragraphs": [
+          "Greetings are an essential part of Rwandan culture and social interaction. In Rwanda, taking time to greet someone properly is a sign of respect and good manners.",
+          "In this lesson, you'll learn the basic greetings used throughout the day in Kinyarwanda, along with their proper pronunciation and cultural context."
+        ]
+      },
+      {
+        "heading": "Common Greetings",
+        "paragraphs": [
+          "Here are some of the most common greetings you'll use in everyday conversations:"
+        ],
+        "examples": [
+          {
+            "kinyarwanda": "Muraho",
+            "pronunciation": "moo-rah-ho",
+            "english": "Hello (to multiple people)"
+          },
+          {
+            "kinyarwanda": "Uraho",
+            "pronunciation": "oo-rah-ho",
+            "english": "Hello (to one person)"
+          },
+          {
+            "kinyarwanda": "Mwaramutse",
+            "pronunciation": "mwah-rah-moot-say",
+            "english": "Good morning (to multiple people, literally 'Did you wake up?')"
+          },
+          {
+            "kinyarwanda": "Waramutse",
+            "pronunciation": "wah-rah-moot-say",
+            "english": "Good morning (to one person)"
+          },
+          {
+            "kinyarwanda": "Mwiriwe",
+            "pronunciation": "mwee-ree-way",
+            "english": "Good afternoon/evening (to multiple people)"
+          },
+          {
+            "kinyarwanda": "Wiriwe",
+            "pronunciation": "wee-ree-way",
+            "english": "Good afternoon/evening (to one person)"
+          }
+        ]
+      },
+      {
+        "heading": "Responding to Greetings",
+        "paragraphs": [
+          "When someone greets you, it's important to respond appropriately. Here are common responses:"
+        ],
+        "examples": [
+          {
+            "kinyarwanda": "Yego, ndaho",
+            "pronunciation": "yay-go, n-dah-ho",
+            "english": "Yes, I am fine (responding to 'Uraho')"
+          },
+          {
+            "kinyarwanda": "Yego, naramutse",
+            "pronunciation": "yay-go, nah-rah-moot-say",
+            "english": "Yes, I woke up well (responding to 'Waramutse')"
+          },
+          {
+            "kinyarwanda": "Amakuru?",
+            "pronunciation": "ah-mah-koo-roo",
+            "english": "How are you? / What's the news? (often follows initial greeting)"
+          },
+          {
+            "kinyarwanda": "Ni meza",
+            "pronunciation": "nee may-zah",
+            "english": "It's good (responding to 'Amakuru?')"
+          }
+        ]
+      }
+    ],
+    "exercises": [
+      {
+        "type": "dragDrop",
+        "instruction": "Form a proper morning greeting",
+        "description": "Drag the word to complete the greeting correctly",
+        "sentenceStart": "",
+        "sentenceEnd": "",
+        "slots": [
+          {
+            "id": "slot1",
+            "correctWordId": "word1"
+          }
+        ],
+        "words": [
+          {
+            "id": "word1",
+            "text": "Mwaramutse"
+          },
+          {
+            "id": "word2",
+            "text": "Mwiriwe"
+          },
+          {
+            "id": "word3",
+            "text": "Muraho"
+          }
+        ]
+      },
+      {
+        "type": "dragDrop",
+        "instruction": "Complete the afternoon greeting response",
+        "description": "When someone says 'Mwiriwe', how would you respond?",
+        "sentenceStart": "",
+        "sentenceEnd": "",
+        "slots": [
+          {
+            "id": "slot1",
+            "correctWordId": "word2"
+          }
+        ],
+        "words": [
+          {
+            "id": "word1",
+            "text": "Naramutse"
+          },
+          {
+            "id": "word2",
+            "text": "Wiriwe"
+          },
+          {
+            "id": "word3",
+            "text": "Amakuru"
+          }
+        ]
+      },
+      {
+        "type": "dragDrop",
+        "instruction": "Form a complete greeting conversation",
+        "description": "Arrange the words to form a proper greeting exchange",
+        "sentenceStart": "Person 1: ",
+        "sentenceEnd": "",
+        "slots": [
+          {
+            "id": "slot1",
+            "correctWordId": "word1"
+          },
+          {
+            "id": "slot2",
+            "correctWordId": "word2"
+          }
+        ],
+        "words": [
+          {
+            "id": "word1",
+            "text": "Uraho!"
+          },
+          {
+            "id": "word2",
+            "text": "Amakuru?"
+          },
+          {
+            "id": "word3",
+            "text": "Mwiriwe"
+          },
+          {
+            "id": "word4",
+            "text": "Waramutse"
+          }
+        ]
+      },
+      {
+        "type": "dragDrop",
+        "instruction": "Complete the conversation",
+        "description": "How would you respond to someone asking 'Amakuru?'",
+        "sentenceStart": "Person 1: Amakuru?\nPerson 2: ",
+        "sentenceEnd": "",
+        "slots": [
+          {
+            "id": "slot1",
+            "correctWordId": "word1"
+          }
+        ],
+        "words": [
+          {
+            "id": "word1",
+            "text": "Ni meza"
+          },
+          {
+            "id": "word2",
+            "text": "Uraho"
+          },
+          {
+            "id": "word3",
+            "text": "Mwaramutse"
+          }
+        ]
+      }
+    ]
+  }
+]

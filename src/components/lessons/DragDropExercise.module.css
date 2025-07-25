@@ -1,0 +1,173 @@
+.exerciseContainer {
+  padding: 2rem;
+  border-radius: 1.5rem;
+  animation: fadeIn 0.5s;
+}
+
+.progressIndicator {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.exerciseTitle {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-primary);
+}
+
+.exerciseDescription {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: var(--color-text-muted);
+}
+
+.sentenceArea {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sentenceContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+
+.sentencePart {
+  font-size: 1.2rem;
+  color: var(--color-text);
+}
+
+.dropSlot {
+  width: 120px;
+  height: 45px;
+  border: 2px dashed var(--color-text-muted);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.dropSlot.correct {
+  border-color: var(--color-primary);
+  background-color: rgba(46, 204, 113, 0.1);
+  animation: pulse 1s infinite alternate;
+}
+
+.dropSlot.incorrect {
+  border-color: #e74c3c;
+  background-color: rgba(231, 76, 60, 0.1);
+  animation: shake 0.5s;
+}
+
+.placedWord {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(52, 152, 219, 0.15);
+  border-radius: 6px;
+  padding: 0.5rem;
+  font-weight: 500;
+}
+
+.wordBank {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 2rem;
+}
+
+.draggableWord {
+  padding: 0.5rem 1rem;
+  background: var(--color-card);
+  border: 1px solid rgba(52, 152, 219, 0.3);
+  border-radius: 8px;
+  cursor: grab;
+  transition: transform 0.2s, box-shadow 0.2s;
+  user-select: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  font-weight: 500;
+}
+
+.draggableWord:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.draggableWord:active {
+  cursor: grabbing;
+  transform: scale(1.05);
+}
+
+.feedbackArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.feedback {
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  animation: fadeIn 0.5s;
+}
+
+.correctFeedback {
+  background-color: rgba(46, 204, 113, 0.15);
+  color: var(--color-primary);
+}
+
+.incorrectFeedback {
+  background-color: rgba(231, 76, 60, 0.15);
+  color: #e74c3c;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 1rem;
+}
+
+.resetBtn {
+  padding: 0.7rem 1.5rem;
+}
+
+.checkBtn {
+  padding: 0.7rem 1.5rem;
+}
+
+.checkBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+  20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.5); }
+  100% { box-shadow: 0 0 0 10px rgba(46, 204, 113, 0); }
+}

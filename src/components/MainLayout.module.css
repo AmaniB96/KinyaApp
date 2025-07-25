@@ -1,0 +1,129 @@
+.pageContainer {
+  min-height: 100vh;
+  background: var(--color-background);
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  border-radius: 1.5rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+  width: 95%;
+  box-shadow: 0 4px 32px 0 rgba(46, 204, 113, 0.12);
+  backdrop-filter: blur(12px);
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-family: var(--font-poetsen-one), cursive;
+}
+
+.navLinks {
+  display: flex;
+  gap: 2rem;
+}
+
+.navLink {
+  color: var(--color-text-muted);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.navLink.active,
+.navLink:hover {
+  color: var(--color-primary);
+}
+
+.burgerMenu {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.mobileAuth { 
+  display: none; 
+}
+
+.desktopAuth { 
+  display: flex; 
+  gap: 1rem; 
+}
+
+.navAuthBtn {
+  padding: 0.5rem 1.3rem;
+  font-size: 1rem;
+  border-radius: 0.7rem;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+  .navbar {
+    flex-direction: row;
+    align-items: center;
+    gap: 0;
+    position: relative;
+  }
+  .burgerMenu {
+    display: block;
+    z-index: 20;
+  }
+  .navLinks {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--color-background);
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1.5rem 0 1rem 0;
+    border-radius: 0 0 1rem 1rem;
+    box-shadow: 0 8px 32px 0 rgba(46,204,113,0.12);
+    display: none;
+    z-index: 10;
+  }
+  .navLinks.open {
+    display: flex;
+    animation: dropdownFade 0.2s;
+  }
+  @keyframes dropdownFade {
+    from { opacity: 0; transform: translateY(-10px);}
+    to { opacity: 1; transform: translateY(0);}
+  }
+  .desktopAuth {
+    display: none;
+  }
+  .mobileAuth {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    margin-top: 1rem;
+  }
+}
+
+/* On small screens, adjust logo and nav */
+@media (max-width: 600px) {
+  .logo {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  .navbar {
+    padding: 1rem 0.5rem;
+    border-radius: 1rem;
+    margin: 1rem auto;
+  }
+}

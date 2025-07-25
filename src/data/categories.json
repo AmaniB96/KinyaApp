@@ -1,0 +1,124 @@
+[
+  {
+    "id": "greetings",
+    "title": "Greetings & Introductions",
+    "description": "Learn how to greet people and introduce yourself in Kinyarwanda",
+    "difficulty": "beginner",
+    "lessons": [
+      {
+        "id": "basic-greetings",
+        "title": "Basic Greetings",
+        "description": "Learn common greetings used throughout the day",
+        "difficulty": "beginner",
+        "exercises": 8,
+        "estimatedMinutes": 10,
+        "prerequisites": []
+      },
+      {
+        "id": "introductions",
+        "title": "Introducing Yourself",
+        "description": "Learn how to tell others about yourself",
+        "difficulty": "beginner",
+        "exercises": 12,
+        "estimatedMinutes": 15,
+        "prerequisites": ["basic-greetings"]
+      },
+      {
+        "id": "formal-greetings",
+        "title": "Formal Greetings",
+        "description": "Respectful greetings for professional settings",
+        "difficulty": "intermediate",
+        "exercises": 6,
+        "estimatedMinutes": 12,
+        "prerequisites": ["introductions"]
+      }
+    ]
+  },
+  {
+    "id": "family",
+    "title": "Family & Relationships",
+    "description": "Vocabulary and phrases for discussing family members and relationships",
+    "difficulty": "beginner",
+    "lessons": [
+      {
+        "id": "family-members",
+        "title": "Family Members",
+        "description": "Learn the terms for immediate family members",
+        "difficulty": "beginner",
+        "exercises": 10,
+        "estimatedMinutes": 12,
+        "prerequisites": []
+      },
+      {
+        "id": "extended-family",
+        "title": "Extended Family",
+        "description": "Terms for extended family relations",
+        "difficulty": "intermediate",
+        "exercises": 8,
+        "estimatedMinutes": 10,
+        "prerequisites": ["family-members"]
+      }
+    ]
+  },
+  {
+    "id": "numbers",
+    "title": "Numbers & Counting",
+    "description": "Learn to count and use numbers in everyday situations",
+    "difficulty": "beginner",
+    "lessons": [
+      {
+        "id": "basic-numbers",
+        "title": "Numbers 1-10",
+        "description": "Learn the basic numbers in Kinyarwanda",
+        "difficulty": "beginner",
+        "exercises": 6,
+        "estimatedMinutes": 8,
+        "prerequisites": []
+      },
+      {
+        "id": "numbers-11-100",
+        "title": "Numbers 11-100",
+        "description": "Expand your number knowledge",
+        "difficulty": "beginner",
+        "exercises": 8,
+        "estimatedMinutes": 12,
+        "prerequisites": ["basic-numbers"]
+      },
+      {
+        "id": "counting-objects",
+        "title": "Counting Objects",
+        "description": "Learn how to count items using proper grammar",
+        "difficulty": "intermediate",
+        "exercises": 10,
+        "estimatedMinutes": 15,
+        "prerequisites": ["numbers-11-100"]
+      }
+    ]
+  },
+  {
+    "id": "food",
+    "title": "Food & Dining",
+    "description": "Essential vocabulary for ordering meals and discussing food",
+    "difficulty": "intermediate",
+    "lessons": [
+      {
+        "id": "basic-foods",
+        "title": "Common Foods",
+        "description": "Learn the names of common Rwandan foods",
+        "difficulty": "beginner",
+        "exercises": 12,
+        "estimatedMinutes": 15,
+        "prerequisites": []
+      },
+      {
+        "id": "ordering-food",
+        "title": "Ordering at Restaurants",
+        "description": "Practice ordering meals at restaurants",
+        "difficulty": "intermediate",
+        "exercises": 10,
+        "estimatedMinutes": 12,
+        "prerequisites": ["basic-foods"]
+      }
+    ]
+  }
+]

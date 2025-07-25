@@ -1,0 +1,43 @@
+.lessonsPage {
+  flex: 1;
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.lessonsHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.lessonsHeader h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.lessonsSubtitle {
+  color: var(--color-text-muted);
+  font-size: 1.2rem;
+}
+
+.categoriesGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.loadingIndicator {
+  text-align: center;
+  color: var(--color-text-muted);
+  padding: 2rem;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .categoriesGrid {
+    flex-direction: column;
+  }
+}
