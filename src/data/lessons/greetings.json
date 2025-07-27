@@ -1,0 +1,35 @@
+[
+  {
+    "id": "basic-greetings",
+    "title": "Basic Greetings in Kinyarwanda",
+    "theory": [
+      {
+        "heading": "Common Greetings",
+        "paragraphs": ["Here are some of the most common greetings..."]
+      }
+    ],
+    "exercises": [
+      {
+        "type": "multiple-choice",
+        "instruction": "How do you say 'Good morning' to one person?",
+        "question": "Select the correct translation.",
+        "choices": [
+          { "text": "Mwaramutse", "correct": false },
+          { "text": "Waramutse", "correct": true },
+          { "text": "Mwiriwe", "correct": false }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "introductions",
+    "title": "Introducing Yourself",
+    "theory": [
+      {
+        "heading": "How to Introduce Yourself",
+        "paragraphs": ["Learning to introduce yourself is a key step..."]
+      }
+    ],
+    "exercises": []
+  }
+]

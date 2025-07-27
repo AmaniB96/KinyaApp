@@ -1,0 +1,21 @@
+[
+  {
+    "id": "at-home-1",
+    "title": "At Home",
+    "theory": [
+      {
+        "heading": "Rooms and Chores",
+        "paragraphs": [
+          "Learn the names of rooms and common chores: igikoni (kitchen), icyumba (bedroom), gusukura (to clean), guteka (to cook)."
+        ]
+      }
+    ],
+    "exercises": [
+      {
+        "type": "typing",
+        "instruction": "Type the Kinyarwanda word for 'kitchen'.",
+        "answer": "igikoni"
+      }
+    ]
+  }
+]

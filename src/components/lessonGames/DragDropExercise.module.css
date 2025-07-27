@@ -1,0 +1,119 @@
+.exerciseContainer {
+  padding: 2rem;
+  border-radius: 1.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+  animation: fadeIn 0.5s;
+  position: relative;
+}
+
+.progressIndicator {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.exerciseTitle {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-primary);
+}
+
+.sentence {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.dropSlot {
+  display: inline-block;
+  min-width: 80px;
+  min-height: 32px;
+  border-bottom: 2px dashed var(--color-secondary);
+  margin: 0 0.3rem;
+  vertical-align: middle;
+  background: rgba(255,255,255,0.07);
+  border-radius: 0.5rem;
+  padding: 0 0.5rem;
+  transition: background 0.2s, border 0.2s;
+}
+
+.emptySlot {
+  color: var(--color-text-muted);
+}
+
+.wordBank {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  min-height: 48px;
+}
+
+.word {
+  padding: 0.7rem 1.2rem;
+  border-radius: 0.7rem;
+  border: 1.5px solid var(--color-card);
+  background: rgba(255,255,255,0.07);
+  color: var(--color-text);
+  font-size: 1rem;
+  cursor: grab;
+  transition: background 0.2s, border 0.2s;
+  margin: 0 0.2rem;
+  user-select: none;
+}
+
+.word:active {
+  background: rgba(52, 152, 219, 0.15);
+  border-color: var(--color-secondary);
+}
+
+.feedbackArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 60px;
+}
+
+.correct {
+  background-color: rgba(46, 204, 113, 0.15);
+  color: var(--color-primary);
+  padding: 0.7rem 1.5rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  animation: fadeIn 0.5s;
+}
+
+.incorrect {
+  background-color: rgba(231, 76, 60, 0.15);
+  color: #e74c3c;
+  padding: 0.7rem 1.5rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  animation: fadeIn 0.5s;
+}
+
+.checkBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.retryBtn {
+  margin-top: 0.5rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

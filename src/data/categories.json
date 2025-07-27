@@ -120,5 +120,56 @@
         "prerequisites": ["basic-foods"]
       }
     ]
+  },
+  {
+    "id": "core-daily-use",
+    "title": "Core Daily Use",
+    "description": "Common phrases and everyday expressions",
+    "difficulty": "beginner",
+    "lessons": [
+      {
+        "id": "common-phrases-1",
+        "title": "Common Phrases: Apologies",
+        "description": "Learn how to say sorry and respond politely.",
+        "difficulty": "beginner",
+        "exercises": 2,
+        "estimatedMinutes": 5,
+        "prerequisites": []
+      }
+    ]
+  },
+  {
+    "id": "social-cultural-interaction",
+    "title": "Social & Cultural Interaction",
+    "description": "Politeness & Respect – Honorifics, respectful forms of speech.",
+    "difficulty": "intermediate",
+    "lessons": [
+      {
+        "id": "politeness-1",
+        "title": "Politeness & Respect",
+        "description": "Learn how to show respect in Kinyarwanda.",
+        "difficulty": "intermediate",
+        "exercises": 1,
+        "estimatedMinutes": 5,
+        "prerequisites": []
+      }
+    ]
+  },
+  {
+    "id": "home-daily-life",
+    "title": "Home & Daily Life",
+    "description": "At Home – Rooms, furniture, household chores, basic verbs.",
+    "difficulty": "beginner",
+    "lessons": [
+      {
+        "id": "at-home-1",
+        "title": "At Home",
+        "description": "Learn the names of rooms and common chores.",
+        "difficulty": "beginner",
+        "exercises": 1,
+        "estimatedMinutes": 5,
+        "prerequisites": []
+      }
+    ]
   }
 ]

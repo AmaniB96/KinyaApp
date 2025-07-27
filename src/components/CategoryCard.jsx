@@ -30,7 +30,7 @@ const CategoryCard = ({ category }) => {
         onClick={() => setExpanded(!expanded)}
       >
         <div>
-          <h3 className={`${styles.categoryTitle} gradient-text`}>{category.title}</h3>
+          <h3 className={`${styles.categoryTitle}`}>{category.title}</h3>
           <p className={styles.categoryDescription}>{category.description}</p>
           
           <div className={styles.categoryMeta}>

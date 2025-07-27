@@ -1,0 +1,30 @@
+[
+  {
+    "id": "family-members",
+    "title": "Family Members",
+    "theory": [
+      {
+        "heading": "Talking About Family",
+        "paragraphs": [
+          "Family is central in Rwandan society. Learn the words for mother, father, brother, sister, and more."
+        ]
+      }
+    ],
+    "exercises": [
+      {
+        "type": "dragDrop",
+        "instruction": "Drag the correct word to complete the sentence.",
+        "sentenceStart": "My father is called",
+        "sentenceEnd": ".",
+        "slots": [
+          { "id": "slot1", "correctWordId": "word2" }
+        ],
+        "words": [
+          { "id": "word1", "text": "mama" },
+          { "id": "word2", "text": "papa" },
+          { "id": "word3", "text": "mugenzi" }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,110 @@
+.exerciseContainer {
+  padding: 2rem;
+  border-radius: 1.5rem;
+  animation: fadeIn 0.5s;
+}
+
+.progressIndicator {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.exerciseTitle {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+
+.questionText {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.choicesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.choiceButton {
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-radius: 1rem;
+  border: 2px solid var(--color-card);
+  background: transparent;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.choiceButton:hover:not(:disabled) {
+  border-color: var(--color-secondary);
+  background-color: rgba(52, 152, 219, 0.1);
+}
+
+.choiceButton.selected {
+  border-color: var(--color-secondary);
+  background-color: rgba(52, 152, 219, 0.2);
+}
+
+.choiceButton.correct {
+  border-color: var(--color-primary);
+  background-color: rgba(46, 204, 113, 0.2);
+  color: var(--color-primary);
+}
+
+.choiceButton.incorrect {
+  border-color: #e74c3c;
+  background-color: rgba(231, 76, 60, 0.2);
+  color: #e74c3c;
+  animation: shake 0.5s;
+}
+
+.feedbackArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60px;
+}
+
+.feedback {
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  animation: fadeIn 0.5s;
+}
+
+.correctFeedback {
+  background-color: rgba(46, 204, 113, 0.15);
+  color: var(--color-primary);
+}
+
+.incorrectFeedback {
+  background-color: rgba(231, 76, 60, 0.15);
+  color: #e74c3c;
+}
+
+.checkBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+  20%, 40%, 60%, 80% { transform: translateX(5px); }
+}

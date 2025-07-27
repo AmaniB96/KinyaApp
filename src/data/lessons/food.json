@@ -1,0 +1,26 @@
+[
+  {
+    "id": "basic-foods",
+    "title": "Common Foods",
+    "theory": [
+      {
+        "heading": "Rwandan Foods",
+        "paragraphs": [
+          "Rwandan cuisine includes foods like ibirayi (potatoes), umuceri (rice), inyama (meat), and ibishyimbo (beans)."
+        ]
+      }
+    ],
+    "exercises": [
+      {
+        "type": "multiple-choice",
+        "instruction": "What is the Kinyarwanda word for 'beans'?",
+        "question": "Select the correct answer.",
+        "choices": [
+          { "text": "ibirayi", "correct": false },
+          { "text": "ibishyimbo", "correct": true },
+          { "text": "umuceri", "correct": false }
+        ]
+      }
+    ]
+  }
+]

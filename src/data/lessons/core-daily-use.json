@@ -1,0 +1,38 @@
+[
+  {
+    "id": "common-phrases-1",
+    "title": "Common Phrases: Apologies",
+    "theory": [
+      {
+        "heading": "Saying Sorry",
+        "paragraphs": [
+          "Knowing how to apologize is crucial in any language. In Kinyarwanda, 'Mbabarira' is the most common way to say 'sorry' or 'excuse me'."
+        ]
+      }
+    ],
+    "exercises": [
+      {
+        "type": "multiple-choice",
+        "instruction": "How do you say 'Sorry' in Kinyarwanda?",
+        "question": "Select the correct translation for 'Sorry'.",
+        "choices": [
+          { "text": "Murakoze", "correct": false },
+          { "text": "Mbabarira", "correct": true },
+          { "text": "Amakuru", "correct": false }
+        ]
+      },
+      {
+        "type": "dragDrop",
+        "instruction": "Complete the sentence.",
+        "description": "Drag the word to apologize for being late.",
+        "sentenceStart": "",
+        "sentenceEnd": ", Natinze.",
+        "slots": [{ "id": "slot1", "correctWordId": "word1" }],
+        "words": [
+          { "id": "word1", "text": "Mbabarira" },
+          { "id": "word2", "text": "Mwiriwe" }
+        ]
+      }
+    ]
+  }
+]

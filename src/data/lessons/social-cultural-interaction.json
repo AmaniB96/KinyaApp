@@ -1,0 +1,22 @@
+[
+  {
+    "id": "politeness-1",
+    "title": "Politeness & Respect",
+    "theory": [
+      {
+        "heading": "Showing Respect",
+        "paragraphs": [
+          "In Rwanda, respect is shown through language. Use 'Bwana' for Mr., 'Madamu' for Mrs., and always greet elders first."
+        ]
+      }
+    ],
+    "exercises": [
+      {
+        "type": "sentence-builder",
+        "instruction": "Arrange the words to form a respectful greeting.",
+        "words": ["Muraho", "Bwana"],
+        "answer": ["Muraho", "Bwana"]
+      }
+    ]
+  }
+]

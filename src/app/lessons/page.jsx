@@ -17,7 +17,7 @@ export default function LessonsPage() {
     <MainLayout activePage="lessons">
       <div className={styles.lessonsPage}>
         <div className={styles.lessonsHeader}>
-          <h1 className="gradient-text">Kinyarwanda Lessons</h1>
+          <h1>Kinyarwanda Lessons</h1>
           <p className={styles.lessonsSubtitle}>
             Select a category below to begin your learning journey
           </p>

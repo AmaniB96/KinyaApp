@@ -1,0 +1,24 @@
+[
+  {
+    "id": "basic-numbers",
+    "title": "Numbers 1-10",
+    "theory": [
+      {
+        "heading": "Counting in Kinyarwanda",
+        "paragraphs": [
+          "Numbers are used every day. Here are numbers 1 to 10: rimwe, kabiri, gatatu, kane, gatanu, gatandatu, karindwi, umunani, icyenda, icumi."
+        ]
+      }
+    ],
+    "exercises": [
+      {
+        "type": "matching",
+        "instruction": "Match the Kinyarwanda number to its English equivalent.",
+        "pairs": [
+          { "left": "rimwe", "right": "one" },
+          { "left": "kabiri", "right": "two" }
+        ]
+      }
+    ]
+  }
+]
