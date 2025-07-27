@@ -1,12 +1,21 @@
 "use client";
 
 import { useState } from "react";
+import { useSession } from "next-auth/react";
 import { FaBookOpen, FaMicrophone, FaUsers, FaBars, FaTimes } from "react-icons/fa";
 import Link from "next/link";
 import AnimatedTitle from "../components/AnimatedTitle";
 
 export default function LandingPage() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { data: session, status } = useSession();
+
+  const getDisplayName = () => {
+    if (session?.user?.name) {
+      return session.user.name.split(' ')[0];
+    }
+    return session?.user?.email?.split('@')[0] || 'User';
+  };
 
   return (
     <div className="landing-container">
@@ -39,22 +48,40 @@ export default function LandingPage() {
             About
           </Link>
           <div className="nav-auth-buttons mobile-auth">
-            <Link href="/login" className="btn btn-secondary nav-auth-btn" onClick={() => setMenuOpen(false)}>
-              Login
-            </Link>
-            <Link href="/register" className="btn btn-primary nav-auth-btn" onClick={() => setMenuOpen(false)}>
-              Register
-            </Link>
+            {session ? (
+              <div style={{ color: 'var(--color-primary)', textAlign: 'center' }}>
+                Welcome back, {getDisplayName()}!
+              </div>
+            ) : (
+              <>
+                <Link href="/login" className="btn btn-secondary nav-auth-btn" onClick={() => setMenuOpen(false)}>
+                  Login
+                </Link>
+                <Link href="/register" className="btn btn-primary nav-auth-btn" onClick={() => setMenuOpen(false)}>
+                  Register
+                </Link>
+              </>
+            )}
           </div>
         </nav>
         {/* Desktop auth buttons */}
         <div className="nav-auth-buttons desktop-auth">
-          <Link href="/login" className="btn btn-secondary nav-auth-btn">
-            Login
-          </Link>
-          <Link href="/register" className="btn btn-primary nav-auth-btn">
-            Register
-          </Link>
+          {status === "loading" ? (
+            <div style={{ color: 'var(--color-text-muted)' }}>Loading...</div>
+          ) : session ? (
+            <div style={{ color: 'var(--color-primary)', fontWeight: '500' }}>
+              Welcome, {getDisplayName()}!
+            </div>
+          ) : (
+            <>
+              <Link href="/login" className="btn btn-secondary nav-auth-btn">
+                Login
+              </Link>
+              <Link href="/register" className="btn btn-primary nav-auth-btn">
+                Register
+              </Link>
+            </>
+          )}
         </div>
       </header>
 
@@ -62,11 +89,11 @@ export default function LandingPage() {
       <main className="hero-section">
         <AnimatedTitle />
         <p className="hero-subtitle">
-          Discover the language, Embrace the culture
+          {session ? `Continue your journey, ${getDisplayName()}!` : "Discover the language, Embrace the culture"}
         </p>
         <div className="hero-cta-group">
           <Link href="/lessons" className="btn btn-primary">
-            Start Learning
+            {session ? "Continue Learning" : "Start Learning"}
           </Link>
           <Link
             href="/quizzes"
