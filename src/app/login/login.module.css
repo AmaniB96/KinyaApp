@@ -216,6 +216,69 @@
   animation: spin 1s linear infinite;
 }
 
+.loggedInBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.welcomeDropdown {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  transition: color 0.2s;
+}
+
+.welcomeDropdown:hover .welcomeName {
+  color: var(--color-secondary);
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-background);
+  border: 1px solid rgba(46, 204, 113, 0.2);
+  border-radius: 0.7rem;
+  box-shadow: 0 4px 32px 0 rgba(46, 204, 113, 0.12);
+  min-width: 140px;
+  z-index: 100;
+  padding: 0.5rem 0;
+  animation: fadeInUp 0.2s;
+}
+
+.dropdownItem {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  background: none;
+  border: none;
+  color: var(--color-text);
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+
+.dropdownItem:hover {
+  background: rgba(46, 204, 113, 0.08);
+  color: var(--color-secondary);
+}
+
+.loggedInText {
+  color: var(--color-text-muted);
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
@@ -246,3 +309,4 @@
     font-size: 1.75rem;
   }
 }
+
