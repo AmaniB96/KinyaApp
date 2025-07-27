@@ -1,8 +1,8 @@
 "use client";
-import { signIn, useSession } from "next-auth/react";
-import { useState, useEffect } from "react";
+import { signIn, signOut, useSession } from "next-auth/react";
+import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
-import { FaGoogle, FaEye, FaEyeSlash } from "react-icons/fa";
+import { FaGoogle, FaEye, FaEyeSlash, FaSignOutAlt } from "react-icons/fa";
 import styles from "./login.module.css";
 
 export default function LoginPage() {
@@ -15,6 +15,8 @@ export default function LoginPage() {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
   const { data: session } = useSession();
   const router = useRouter();
 
@@ -24,6 +26,18 @@ export default function LoginPage() {
       router.push("/dashboard");
     }
   }, [session, router]);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    if (!dropdownOpen) return;
+    function handleClick(e) {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setDropdownOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClick);
+    return () => document.removeEventListener("mousedown", handleClick);
+  }, [dropdownOpen]);
 
   const resetForm = () => {
     setEmail("");
@@ -81,11 +95,35 @@ export default function LoginPage() {
   };
 
   if (session) {
+    const displayName =
+      session.user?.name ||
+      session.user?.email?.split("@")[0] ||
+      "User";
     return (
       <div className={styles.container}>
-        <div className={styles.redirecting}>
-          <div className={styles.spinner}></div>
-          <p>Redirecting...</p>
+        <div className={styles.loggedInBox}>
+          <div
+            className={styles.welcomeDropdown}
+            onMouseEnter={() => setDropdownOpen(true)}
+            onMouseLeave={() => setDropdownOpen(false)}
+            ref={dropdownRef}
+          >
+            <span className={styles.welcomeName}>
+              Welcome, {displayName}!
+            </span>
+            {dropdownOpen && (
+              <div className={styles.dropdownMenu}>
+                <button
+                  className={styles.dropdownItem}
+                  onClick={() => signOut({ callbackUrl: "/" })}
+                >
+                  <FaSignOutAlt style={{ marginRight: 8 }} />
+                  Logout
+                </button>
+              </div>
+            )}
+          </div>
+          <p className={styles.loggedInText}>You are logged in.</p>
         </div>
       </div>
     );
@@ -223,4 +261,69 @@ export default function LoginPage() {
       </div>
     </div>
   );
+}
+
+/* ...existing styles... */
+
+.loggedInBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.welcomeDropdown {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  transition: color 0.2s;
+}
+
+.welcomeDropdown:hover .welcomeName {
+  color: var(--color-secondary);
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-background);
+  border: 1px solid rgba(46, 204, 113, 0.2);
+  border-radius: 0.7rem;
+  box-shadow: 0 4px 32px 0 rgba(46, 204, 113, 0.12);
+  min-width: 140px;
+  z-index: 100;
+  padding: 0.5rem 0;
+  animation: fadeInUp 0.2s;
+}
+
+.dropdownItem {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  background: none;
+  border: none;
+  color: var(--color-text);
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+
+.dropdownItem:hover {
+  background: rgba(46, 204, 113, 0.08);
+  color: var(--color-secondary);
+}
+
+.loggedInText {
+  color: var(--color-text-muted);
+  font-size: 1rem;
+  margin-top: 0.5rem;
 }
